@@ -1,12 +1,18 @@
-﻿int num1, num2, divisao;
+﻿double numerador, denominador, quociente;
 
 Console.Write("Digite o numerador:");
-num1 = Convert.ToInt32(Console.ReadLine());
+numerador = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Digite o denominador:");
-num2 = Convert.ToInt32(Console.ReadLine());
+denominador = Convert.ToDouble(Console.ReadLine());
 
-divisao = num1 / num2;
+if(denominador == 0)
+{
+    Console.WriteLine ("Não é possível dividir por zero.");
+}
+else
+{
+    quociente = numerador / denominador;
 
-Console.WriteLine($" {num1} divido por {num2} é igual: {divisao}");
-
+    Console.WriteLine($" {numerador} divido por {denominador} é igual: {quociente}");
+}
